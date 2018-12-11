@@ -5,12 +5,15 @@ public class Student {
 	private String surname ;
 	private String name ;
 	private String patronymic ;
-	private String dateBorn ;
+	private int dayBorn ;
+	private int monthBorn ;
+	private int yearBorn ;
 	private String address ;
 	private int number ;
 	private String faculty ;
 	private String group ;
 	private int course ;
+	
 	public int getId() {
 		return id;
 	}
@@ -35,11 +38,23 @@ public class Student {
 	public void setPatronymic(String patronymic) {
 		this.patronymic = patronymic;
 	}
-	public String getDateBorn() {
-		return dateBorn;
+	public int getDayBorn() {
+		return dayBorn;
 	}
-	public void setDateBorn(String dateBorn) {
-		this.dateBorn = dateBorn;
+	public void setDayBorn(int dayBorn) {
+		this.dayBorn = dayBorn;
+	}
+	public int getMonthBorn() {
+		return monthBorn;
+	}
+	public void setMonthBorn(int monthBorn) {
+		this.monthBorn = monthBorn;
+	}
+	public int getYearBorn() {
+		return yearBorn;
+	}
+	public void setYearBorn(int yearBorn) {
+		this.yearBorn = yearBorn;
 	}
 	public String getAddress() {
 		return address;
@@ -71,14 +86,16 @@ public class Student {
 	public void setCourse(int course) {
 		this.course = course;
 	}
-	public Student(int id, String surname, String name, String patronymic, String dateBorn, String address, int number,
-			String faculty, String group, int course) {
+	public Student(int id, String surname, String name, String patronymic, int dayBorn, int monthBorn, int yearBorn,
+			String address, int number, String faculty, String group, int course) {
 		super();
 		this.id = id;
 		this.surname = surname;
 		this.name = name;
 		this.patronymic = patronymic;
-		this.dateBorn = dateBorn;
+		this.dayBorn = dayBorn;
+		this.monthBorn = monthBorn;
+		this.yearBorn = yearBorn;
 		this.address = address;
 		this.number = number;
 		this.faculty = faculty;
@@ -88,8 +105,9 @@ public class Student {
 	@Override
 	public String toString() {
 		return "Student [id=" + id + ", surname=" + surname + ", name=" + name + ", patronymic=" + patronymic
-				+ ", dateBorn=" + dateBorn + ", address=" + address + ", number=" + number + ", faculty=" + faculty
-				+ ", group=" + group + ", course=" + course + "]";
+				+ ", dayBorn=" + dayBorn + ", monthBorn=" + monthBorn + ", yearBorn=" + yearBorn + ", address="
+				+ address + ", number=" + number + ", faculty=" + faculty + ", group=" + group + ", course=" + course
+				+ "]";
 	}
 	
 }

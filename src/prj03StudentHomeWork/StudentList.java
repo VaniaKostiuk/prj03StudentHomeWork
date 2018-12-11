@@ -24,30 +24,53 @@ public class StudentList {
 		System.out.println(students[i]);
 		}
 	}
-	/*	Название методов : (a,b,c,d) :
-	 * 	a) список студентов заданного факультета;
-		b) списки студентов для каждого факультета и курса;
-		c) список студентов, родившихся после заданного года;
-		d) список учебной группы 
+	/*	Название методов : (aaa,bbb,ccc,ddd) :
+	 * 	aaa) список студентов заданного факультета;
+		bbb) списки студентов для каждого факультета и курса;
+		ccc) список студентов, родившихся после заданного года;
+		ddd) список учебной группы 
 	*/
-	
-	public StudentList a (String faculty) {
-		StudentList a = new StudentList ();
+	//aaa) список студентов заданного факультета;
+	public StudentList aaa (String faculty) {    
+		StudentList aaa = new StudentList ();
 		for (int i = 0; i < size(); i++) {
 				if(students[i].getFaculty().equals(faculty)) {
 					System.out.println(students[i]);
 				}
 			}
-		return a ;
+		return aaa ;
 	}
-	public StudentList b (String faculty ,int course) {
-		StudentList b = new StudentList ();
+	
+	//bbb) списки студентов для каждого факультета и курса;
+	public StudentList bbb (String faculty ,int course) {      
+		StudentList bbb = new StudentList ();
 		for (int i = 0; i < size(); i++) {
 				if(students[i].getFaculty().equals(faculty) && students[i].getCourse()==course) {
 					System.out.println(students[i]);
 				}
 			}
-		return b ;
+		return bbb ;
 	}
-
+	
+	//ccc) список студентов, родившихся после заданного года;
+	public StudentList ccc (int yearBorn) {
+		StudentList ccc = new StudentList ();
+		for (int i = 0; i < size(); i++) {
+				if(students[i].getYearBorn()>yearBorn) {
+					System.out.println(students[i]);
+				}
+			}
+		return ccc ;
+	}
+	
+	//ddd) список учебной группы 
+	public StudentList ddd (String group) {
+		StudentList ddd = new StudentList ();
+		for (int i = 0; i < size(); i++) {
+				if(students[i].getGroup().equals(group)) {
+					System.out.println(students[i]);
+				}
+			}
+		return ddd ;
+	}
 }
