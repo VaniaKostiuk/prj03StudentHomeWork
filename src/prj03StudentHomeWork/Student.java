@@ -1,4 +1,5 @@
 package prj03StudentHomeWork;
+//Student: id, Фамилия, Имя, Отчество, Дата рождения, Адрес, Телефон,Факультет, Курс, Группа
 
 public class Student {
 	private int id ;
@@ -11,8 +12,8 @@ public class Student {
 	private String address ;
 	private int number ;
 	private String faculty ;
-	private String group ;
 	private int course ;
+	private String group ;
 	
 	public int getId() {
 		return id;

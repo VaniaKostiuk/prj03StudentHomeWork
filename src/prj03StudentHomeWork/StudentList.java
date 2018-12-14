@@ -24,53 +24,49 @@ public class StudentList {
 		System.out.println(students[i]);
 		}
 	}
-	/*	Название методов : (aaa,bbb,ccc,ddd) :
-	 * 	aaa) список студентов заданного факультета;
-		bbb) списки студентов для каждого факультета и курса;
-		ccc) список студентов, родившихся после заданного года;
-		ddd) список учебной группы 
-	*/
-	//aaa) список студентов заданного факультета;
-	public StudentList aaa (String faculty) {    
-		StudentList aaa = new StudentList ();
+	
+	 //(StudentListByFaculty ) список студентов заданного факультета;
+	 //(StudentListByFacultyAndCourse) списки студентов для каждого факультета и курса;
+	 //(StudentListBornAfterNYear) список студентов, родившихся после заданного года;
+	 //(StudentListGroup) список учебной группы 
+	
+	public StudentList StudentListByFaculty (String faculty) {    
+		StudentList StudentListByFaculty  = new StudentList ();
 		for (int i = 0; i < size(); i++) {
 				if(students[i].getFaculty().equals(faculty)) {
 					System.out.println(students[i]);
 				}
 			}
-		return aaa ;
+		return StudentListByFaculty  ;
 	}
 	
-	//bbb) списки студентов для каждого факультета и курса;
-	public StudentList bbb (String faculty ,int course) {      
-		StudentList bbb = new StudentList ();
+	public StudentList StudentListByFacultyAndCourse (String faculty ,int course) {      
+		StudentList StudentListByFacultyAndCourse = new StudentList ();
 		for (int i = 0; i < size(); i++) {
 				if(students[i].getFaculty().equals(faculty) && students[i].getCourse()==course) {
 					System.out.println(students[i]);
 				}
 			}
-		return bbb ;
+		return StudentListByFacultyAndCourse ;
 	}
 	
-	//ccc) список студентов, родившихся после заданного года;
-	public StudentList ccc (int yearBorn) {
-		StudentList ccc = new StudentList ();
+	public StudentList StudentListBornAfterNYear (int yearBorn) {
+		StudentList StudentListBornAfterNYear = new StudentList ();
 		for (int i = 0; i < size(); i++) {
 				if(students[i].getYearBorn()>yearBorn) {
 					System.out.println(students[i]);
 				}
 			}
-		return ccc ;
+		return StudentListBornAfterNYear ;
 	}
-	
-	//ddd) список учебной группы 
-	public StudentList ddd (String group) {
-		StudentList ddd = new StudentList ();
+
+	public StudentList StudentListGroup (String group) {
+		StudentList StudentListGroup = new StudentList ();
 		for (int i = 0; i < size(); i++) {
 				if(students[i].getGroup().equals(group)) {
 					System.out.println(students[i]);
 				}
 			}
-		return ddd ;
+		return StudentListGroup ;
 	}
 }
